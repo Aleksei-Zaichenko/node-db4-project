@@ -32,7 +32,7 @@ return knex.schema
             .onDelete('RESTRICT')
             .onUpdate('CASCADE');
 
-        tbl.integer('ingredient_quatity').notNullable();
+        tbl.integer('ingredient_quantity').notNullable();
         tbl.unique(['recipe_id', 'ingredient_id']);
     })
 };
