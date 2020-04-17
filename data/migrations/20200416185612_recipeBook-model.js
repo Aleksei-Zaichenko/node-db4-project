@@ -1,14 +1,19 @@
 
 exports.up = function(knex) {
 return knex.schema
+    //recipes
     .createTable('recipes', tbl => {
         tbl.string('id',255).primary();
         tbl.string('name',255).notNullable().unique().index();
     })
+
+    //ingredients
     .createTable('ingredients', tbl =>{
         tbl.string('id',255).primary();
         tbl.string('name',255).notNullable().unique().index();
     })
+
+    //instructions
     .createTable('instructions', tbl =>{
         tbl.string('id',255).primary();
         tbl.text('instruction_description').notNullable();
