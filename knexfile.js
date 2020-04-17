@@ -5,7 +5,7 @@ module.exports = {
   development: {
     client: 'sqlite3',
     connection: {
-      filename: './dev.sqlite3'
+      filename: './data/recipeBook.db'
     },
     useNullAsDefault: true,
     // generates migration files in a data/migrations/ folder

@@ -7,7 +7,7 @@ return knex.schema
     })
     .createTable('ingredients', tbl =>{
         tbl.string('id',255).primary();
-        tbl.string('name',255).notNullable.unique().index();
+        tbl.string('name',255).notNullable().unique().index();
     })
     .createTable('instructions', tbl =>{
         tbl.string('id',255).primary();
@@ -38,7 +38,7 @@ return knex.schema
 };
 
 exports.down = function(knex) {
-  return knex
+  return knex.schema
     .dropTableIfExists('instructions')
     .dropTableIfExists('ingredients')
     .dropTableIfExists('recipes');
